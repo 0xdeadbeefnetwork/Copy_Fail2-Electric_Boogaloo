@@ -36,6 +36,7 @@ path.
 | Arch               | 6.19.11-arch1-1      | root             |
 | Fedora 43          | 6.19.14-200.fc43     | root             |
 | Ubuntu 26.04 LTS   | 7.0.0-15-generic     | root             |
+| RHEL 10            | 6.12.0-124.55.1.el10_1.x86_64 | root    |
 
 *MSG_SPLICE_PAGES UDP support was added in 6.5, so 5.15 is below the
 bug's reach.
