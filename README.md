@@ -41,6 +41,16 @@ path.
 *MSG_SPLICE_PAGES UDP support was added in 6.5, so 5.15 is below the
 bug's reach.
 
+## Auditd rule
+
+~~~
+sudo tee /etc/audit/rules.d/xfrm_netlink.rules >/dev/null <<'EOF'
+-a always,exit -F arch=b64 -S socket -F a0=16 -F a2=6 -k xfrm_netlink_socket
+-a always,exit -F arch=b32 -S socket -F a0=16 -F a2=6 -k xfrm_netlink_socket
+EOF
+sudo augenrules --load
+~~~
+
 ## Credits
 
 Hyunwoo Kim (imv4bel) and Kuan-Ting Chen reported, tested,
