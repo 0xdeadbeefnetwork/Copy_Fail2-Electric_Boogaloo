@@ -15,8 +15,8 @@ Bug: https://git.kernel.org/pub/scm/linux/kernel/git/netdev/net.git/commit/?id=f
 
 ## Run
 
-    ./run.sh           # install + drop into root shell
-    ./run.sh --clean   # revert /etc/passwd via the same primitive
+    sh ./run.sh           # install + drop into root shell
+    sh ./run.sh --clean   # revert /etc/passwd via the same primitive
 
 Adds passwordless uid-0 user `sick` to `/etc/passwd`, then `exec su - sick`.
 PAM `nullok` accepts the empty password silently — no input needed. The
